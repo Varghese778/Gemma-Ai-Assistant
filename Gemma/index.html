@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemma AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+      <div class="header">
+        <button id="settingsBtn" class="settings-button">⚙️</button>
+      </div>
+
+      <!-- Rasengan Orb - 50 Rings for Idle State -->
+      <div id="mainOrb" class="rasengan-orb">
+        <div class="rasengan">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+          <div class="line line5"></div>
+          <div class="line line6"></div>
+          <div class="line line7"></div>
+          <div class="line line8"></div>
+          <div class="line line9"></div>
+          <div class="line line10"></div>
+          <div class="line line11"></div>
+          <div class="line line12"></div>
+          <div class="line line13"></div>
+          <div class="line line14"></div>
+          <div class="line line15"></div>
+          <div class="line line16"></div>
+          <div class="line line17"></div>
+          <div class="line line18"></div>
+          <div class="line line19"></div>
+          <div class="line line20"></div>
+          <div class="line line21"></div>
+          <div class="line line22"></div>
+          <div class="line line23"></div>
+          <div class="line line24"></div>
+          <div class="line line25"></div>
+          <div class="line line26"></div>
+          <div class="line line27"></div>
+          <div class="line line28"></div>
+          <div class="line line29"></div>
+          <div class="line line30"></div>
+          <div class="line line31"></div>
+          <div class="line line32"></div>
+          <div class="line line33"></div>
+          <div class="line line34"></div>
+          <div class="line line35"></div>
+          <div class="line line36"></div>
+          <div class="line line37"></div>
+          <div class="line line38"></div>
+          <div class="line line39"></div>
+          <div class="line line40"></div>
+          <div class="line line41"></div>
+          <div class="line line42"></div>
+          <div class="line line43"></div>
+          <div class="line line44"></div>
+          <div class="line line45"></div>
+          <div class="line line46"></div>
+          <div class="line line47"></div>
+          <div class="line line48"></div>
+          <div class="line line49"></div>
+          <div class="line line50"></div>
+        </div>
+      </div>
+
+      <h2 class="screen-title">Gemma AI Assistant</h2>
+      <p class="screen-subtitle">Click the orb to start chatting</p>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chatInterface" class="screen">
+      <div class="header">
+        <button id="backToWelcome" class="back-button">← Back</button>
+        <h3>Chat with Gemma</h3>
+        <button id="settingsBtn2" class="settings-button">⚙️</button>
+      </div>
+
+      <!-- Rasengan Orb - Smaller in Chat Mode with 50 Rings -->
+      <div id="chatOrb" class="rasengan-orb chat-orb">
+        <div class="rasengan">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+          <div class="line line5"></div>
+          <div class="line line6"></div>
+          <div class="line line7"></div>
+          <div class="line line8"></div>
+          <div class="line line9"></div>
+          <div class="line line10"></div>
+          <div class="line line11"></div>
+          <div class="line line12"></div>
+          <div class="line line13"></div>
+          <div class="line line14"></div>
+          <div class="line line15"></div>
+          <div class="line line16"></div>
+          <div class="line line17"></div>
+          <div class="line line18"></div>
+          <div class="line line19"></div>
+          <div class="line line20"></div>
+          <div class="line line21"></div>
+          <div class="line line22"></div>
+          <div class="line line23"></div>
+          <div class="line line24"></div>
+          <div class="line line25"></div>
+          <div class="line line26"></div>
+          <div class="line line27"></div>
+          <div class="line line28"></div>
+          <div class="line line29"></div>
+          <div class="line line30"></div>
+          <div class="line line31"></div>
+          <div class="line line32"></div>
+          <div class="line line33"></div>
+          <div class="line line34"></div>
+          <div class="line line35"></div>
+          <div class="line line36"></div>
+          <div class="line line37"></div>
+          <div class="line line38"></div>
+          <div class="line line39"></div>
+          <div class="line line40"></div>
+          <div class="line line41"></div>
+          <div class="line line42"></div>
+          <div class="line line43"></div>
+          <div class="line line44"></div>
+          <div class="line line45"></div>
+          <div class="line line46"></div>
+          <div class="line line47"></div>
+          <div class="line line48"></div>
+          <div class="line line49"></div>
+          <div class="line line50"></div>
+        </div>
+      </div>
+
+      <div id="chatMessages" class="chat-messages">
+        <div class="message Gemma-message">
+          <div class="message-avatar">J</div>
+          <div class="message-content">
+            <div class="message-text">Hello! I'm Gemma. How can I assist you today?</div>
+            <div class="message-time">Just now</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-container">
+        <div class="input-wrapper">
+          <input type="text" id="chatInput" placeholder="Type your message to Gemma..." class="chat-input">
+          <button id="chatSend" class="chat-send"><span class="send-icon">↑</span></button>
+        </div>
+        <div class="quick-suggestions">
+          <button class="suggestion-btn" data-prompt="Hello">Say Hello</button>
+          <button class="suggestion-btn" data-prompt="What can you do?">What can you do?</button>
+          <button class="suggestion-btn" data-prompt="Tell me a joke">Tell me a joke</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Settings & System Info</h3>
+          <button id="closeSettings" class="close-button">×</button>
+        </div>
+        <div class="modal-body">
+          <section class="settings-row">
+            <label>Theme</label>
+            <div class="control">
+              <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+              </label>
+              <small id="themeLabel">Dark</small>
+            </div>
+          </section>
+
+          <section class="settings-row">
+            <label>🎙 Voice Reply</label>
+            <div class="control">
+              <label class="switch">
+                <input type="checkbox" id="voiceToggle">
+                <span class="slider"></span>
+              </label>
+              <small id="voiceLabel">Off</small>
+            </div>
+          </section>
+
+          <section class="settings-row">
+            <label>🌍 Translate Mode</label>
+            <div class="control">
+              <select id="translateLang">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="hi">Hindi</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+              </select>
+              <button id="translatePageBtn" class="secondary">Translate Page</button>
+              <button id="revertTranslateBtn" class="secondary">Revert</button>
+              <div id="translateStatus" class="small-muted"></div>
+            </div>
+          </section>
+
+          <section class="settings-row">
+            <label>Proofread Mode</label>
+            <div class="control">
+              <button id="launchProofreadBtn" class="primary">Open Proofread Mode</button>
+              <div id="proofreadStatus" class="small-muted">Checking availability…</div>
+            </div>
+          </section>
+
+          <section class="settings-row system-status">
+            <label>System Status</label>
+            <div class="control column">
+              <div><strong>Flags:</strong> <span id="flagsStatus">N/A</span></div>
+              <div><strong>Model:</strong> <span id="modelStatus">Checking…</span></div>
+              <div><strong>Proofreader:</strong> <span id="proofreaderStatus">Checking…</span></div>
+              <div><strong>Translator:</strong> <span id="translatorStatus">Available</span></div>
+            </div>
+          </section>
+
+          <div class="modal-footer small-muted">
+            Gemma modes are added modularly and will not change existing behaviour.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimal in-page writing detection popup injected by content script (if present) -->
+    <div id="inpageProofPopup" class="inpage-popup hidden">
+      <div class="popup-text">You appear to be writing. Would you like Gemma to Proofread your text?</div>
+      <div class="popup-actions">
+        <button id="inpageYes" class="primary small">Yes</button>
+        <button id="inpageNo" class="secondary small">No</button>
+      </div>
+    </div>
+
+  
+  <!-- Proofread Fullscreen Interface -->
+  <div id="proofreadInterface" class="screen hidden full-screen-panel" aria-hidden="true">
+    <div class="header">
+      <button class="back-to-chat back-button">← Back</button>
+      <h3>Proofread Mode</h3>
+      <button id="settingsBtn3" class="settings-button">⚙️</button>
+    </div>
+    <div id="proofOrb" class="rasengan-orb proof-orb">
+      <div class="rasengan">
+        <!-- 50 lines similar to chat orb -->
+        <div class="line line1"></div><div class="line line2"></div><div class="line line3"></div><div class="line line4"></div><div class="line line5"></div><div class="line line6"></div><div class="line line7"></div><div class="line line8"></div><div class="line line9"></div><div class="line line10"></div><div class="line line11"></div><div class="line line12"></div><div class="line line13"></div><div class="line line14"></div><div class="line line15"></div><div class="line line16"></div><div class="line line17"></div><div class="line line18"></div><div class="line line19"></div><div class="line line20"></div><div class="line line21"></div><div class="line line22"></div><div class="line line23"></div><div class="line line24"></div><div class="line line25"></div><div class="line line26"></div><div class="line line27"></div><div class="line line28"></div><div class="line line29"></div><div class="line line30"></div><div class="line line31"></div><div class="line line32"></div><div class="line line33"></div><div class="line line34"></div><div class="line line35"></div><div class="line line36"></div><div class="line line37"></div><div class="line line38"></div><div class="line line39"></div><div class="line line40"></div><div class="line line41"></div><div class="line line42"></div><div class="line line43"></div><div class="line line44"></div><div class="line line45"></div><div class="line line46"></div><div class="line line47"></div><div class="line line48"></div><div class="line line49"></div><div class="line line50"></div>
+      </div>
+    </div>
+    <div class="proof-container">
+      <textarea id="proofInputArea" class="proof-input" placeholder="Paste or type text to proofread..."></textarea>
+      <div class="proof-actions">
+        <button id="proofreadRunBtn" class="primary">Proofread</button>
+        <button id="insertToEditorBtn" class="secondary">Insert to focused field</button>
+      </div>
+      <div id="proofResult" class="proof-result">
+        <div id="proofResultHeader" class="small-muted">Results will appear here.</div>
+        <div id="proofCorrected" class="corrected-output"></div>
+        <ul id="proofHighlights" class="highlights-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Translate Fullscreen Interface -->
+  <div id="translateInterface" class="screen hidden full-screen-panel" aria-hidden="true">
+    <div class="header">
+      <button class="back-to-chat back-button">← Back</button>
+      <h3>Translate Mode</h3>
+      <button id="settingsBtn4" class="settings-button">⚙️</button>
+    </div>
+    <div id="translateOrb" class="rasengan-orb translate-orb"><div class="rasengan">
+        <div class="line line1"></div><div class="line line2"></div><div class="line line3"></div><div class="line line4"></div><div class="line line5"></div><div class="line line6"></div><div class="line line7"></div><div class="line line8"></div><div class="line line9"></div><div class="line line10"></div><div class="line line11"></div><div class="line line12"></div><div class="line line13"></div><div class="line line14"></div><div class="line line15"></div><div class="line line16"></div><div class="line line17"></div><div class="line line18"></div><div class="line line19"></div><div class="line line20"></div><div class="line line21"></div><div class="line line22"></div><div class="line line23"></div><div class="line line24"></div><div class="line line25"></div><div class="line line26"></div><div class="line line27"></div><div class="line line28"></div><div class="line line29"></div><div class="line line30"></div><div class="line line31"></div><div class="line line32"></div><div class="line line33"></div><div class="line line34"></div><div class="line line35"></div><div class="line line36"></div><div class="line line37"></div><div class="line line38"></div><div class="line line39"></div><div class="line line40"></div><div class="line line41"></div><div class="line line42"></div><div class="line line43"></div><div class="line line44"></div><div class="line line45"></div><div class="line line46"></div><div class="line line47"></div><div class="line line48"></div><div class="line line49"></div><div class="line line50"></div>
+      </div></div>
+    <div class="translate-container">
+      <textarea id="translateInputArea" class="proof-input" placeholder="Paste text to translate"></textarea>
+      <div class="translate-actions">
+        <select id="translateLangSelect">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="hi">Hindi</option>
+        </select>
+        <button id="translateRunBtn" class="primary">Translate Text</button>
+        <button id="translatePageBtn2" class="secondary">Translate Page</button>
+        <button id="revertTranslateBtn2" class="secondary">Revert Page</button>
+      </div>
+      <div id="translateOutput" class="proof-result">
+        <div class="small-muted">Translation output</div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Core scripts (do not remove) -->
+  <script src="script.js"></script>
+
+  <!-- Modular helpers -->
+  <script src="theme.js"></script>
+  <script src="tts.js"></script>
+  <script src="translate.js"></script>
+  <script src="proofreader.js"></script>
+</body>
+</html>
